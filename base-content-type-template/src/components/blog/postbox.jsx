@@ -12,6 +12,9 @@ import parser from "html-react-parser";
 
 const ITEMS_PER_PAGE = Number(process.env.NEXT_PUBLIC_ITEM_PER_PAGE) ;
 const descriptionLimit = Number(process.env.NEXT_PUBLIC_DESCRIPTION_LIMIT) ;
+
+
+
 const Postbox = ({ posts, catPosts, categories }) => {
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -25,6 +28,8 @@ const Postbox = ({ posts, catPosts, categories }) => {
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
   const endIndex = startIndex + ITEMS_PER_PAGE;
   const visiblePosts = catPosts.slice(startIndex, endIndex);
+
+
 
   return (
     <>
@@ -49,6 +54,9 @@ const Postbox = ({ posts, catPosts, categories }) => {
                       "en-US",
                       options
                     );
+
+                    const croppedDes = post?.description.substring(0,descriptionLimit)
+                    const description = `${croppedDes} <span className='read-more'> ... Read More</span>`
 
                     return (
                       <div className="row blogcard__wrapper" key={post.id}>
@@ -91,7 +99,7 @@ const Postbox = ({ posts, catPosts, categories }) => {
                                 </Link>
                               </h3>
                               <div className="postbox__text postbox__description mb-1">
-                                {parser(post?.description.substring(0,descriptionLimit))}
+                                {description && <>{parser(description)}</>}
                               </div>
                               <div className="postbox__meta">
                                 <span>

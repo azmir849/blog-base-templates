@@ -290,6 +290,12 @@
                 font-size: 14px !important;
             }
         }
+        .read-more {
+            color: var(--tp-heading-secondary);
+            cursor: pointer;
+            // text-decoration: underline;
+            margin-left: 5px;
+          }
     }
     &__slider{
         & .slick-arrow{
@@ -771,6 +777,7 @@ blockquote{
 .blog-image img{
     width: 100%;
     height: 100%;
+    object-fit: contain;
 }
 .blog-cat-name{
     margin-bottom: 10px;
