@@ -1,0 +1,1 @@
+{"c":["pages/post/[slug]/[id]","webpack"],"r":["pages/search-posts/[query]"],"m":["./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?absolutePagePath=F%3A%5C2025%5Cproject%202025%5Cfigmapea%5Cfigma%5Csrc%5Cpages%5Csearch-posts%5C%5Bquery%5D%5Cindex.jsx&page=%2Fsearch-posts%2F%5Bquery%5D!","./src/pages/search-posts/[query]/index.jsx"]}
