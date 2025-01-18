@@ -1,47 +1,6 @@
 import Link from "next/link";
 import React from "react";
 
-// category_data
-const category_data = [
-  {
-    category: "Dashboards",
-    blog_item: "14",
-  },
-  {
-    category: "Landing Pages",
-    blog_item: "14",
-  },
-  {
-    category: "Mockups",
-    blog_item: "19",
-  },
-  {
-    category: "Illustrations",
-    blog_item: "19",
-  },
-  {
-    category: "UI Kits",
-    blog_item: "19",
-  },
-  {
-    category: "Icons",
-    blog_item: "19",
-  },
-  {
-    category: "Charts",
-    blog_item: "19",
-  },
-  {
-    category: "Maps",
-    blog_item: "19",
-  },
-  {
-    category: "Multimedia",
-    blog_item: "19",
-  },
-  
-];
-
 const Category = ({categories}) => {
   return (
     <>

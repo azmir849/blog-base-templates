@@ -27,20 +27,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/category-filter/[slug]/[id]": [
+    "/post/[slug]/[id]": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/category-filter/[slug]/[id].js"
-    ],
-    "/category-header/[slug]/[id]": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/category-header/[slug]/[id].js"
-    ],
-    "/category/[name]/[id]": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/category/[name]/[id].js"
+      "static/chunks/pages/post/[slug]/[id].js"
     ]
   },
   "ampFirstPages": []

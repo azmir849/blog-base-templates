@@ -4,7 +4,6 @@ import MobileMenus from "./mobile-menus";
 import Subscribe from "@/src/components/blog/subscribe";
 
 const Sidebar = ({ isActive, setIsActive, categories }) => {
-  console.log("categories", categories);
   return (
     <>
       <div className={`tp-sidebar-menu ${isActive ? "sidebar-opened" : ""}`}>
@@ -21,30 +20,6 @@ const Sidebar = ({ isActive, setIsActive, categories }) => {
         </div>
         <div className="sidebar-info">
           <Subscribe />
-          {/* <h4 className="mb-15">Contact Info</h4>
-          <ul className="side_circle">
-            <li>27 Division St, New York</li>
-            <li>
-              <a href="tel:123456789">+1 800 123 456 78</a>
-            </li>
-            <li>
-              <a href="mailto:epora@example.com">epora@example.com</a>
-            </li>
-          </ul>
-          <div className="side-social">
-            <a href="#">
-              <i className="fab fa-facebook-f"></i>
-            </a>
-            <a href="#">
-              <i className="fab fa-twitter"></i>
-            </a>
-            <a href="#">
-              <i className="fab fa-linkedin"></i>
-            </a>
-            <a href="#">
-              <i className="fab fa-instagram"></i>
-            </a>
-          </div> */}
         </div>
       </div>
       <div

@@ -1,25 +1,24 @@
-import { animationCreate } from "@/utils/utils";
-import React, {useEffect} from "react";
-import BackToTop from "../lib/BackToTop";
-import Footer from "./footers/footer";
-import Header from "./headers/header";
+import { animationCreate } from '@/utils/utils';
+import React, {useEffect} from 'react';
+import BackToTop from '../lib/BackToTop';
+import FooterTwo from './footers/footer';
+import HeaderTwo from './headers/header';
 
-const Wrapper = ({ children }) => {
-  
-  useEffect(() => {
-    setTimeout(() => {
-      animationCreate()
-    }, 500);
-  },[])
+const Wrapper = ({children, categories}) => {
+    useEffect(() => {
+        setTimeout(() => {
+          // animationCreate()
+        }, 30);
+      },[])
 
-  return (
-    <>
-      <Header />
-      {children}
-      <Footer />
-      <BackToTop />
-    </>
-  );
+    return (
+        <>
+        <HeaderTwo categories={categories} />
+            {children}
+            <FooterTwo />
+            <BackToTop />
+        </>
+    );
 };
 
 export default Wrapper;

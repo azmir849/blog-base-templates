@@ -1,12 +1,12 @@
 import React from "react";
 import SEO from "../common/seo";
 import Contact from "../components/contact";
-import Wrapper2 from "../layout/wrapper-2";
+import Wrapper2 from "../layout/wrapper";
 import { allcategoryUrl, allpostsUrl } from "@/utils/api/api";
 import { useRouter } from "next/router";
 import { commonMetaData } from "../common/commonMetaData";
 
-const index = ({ posts, categories}) => {
+const index = ({ categories}) => {
     const router = useRouter();
     const url = router.asPath;
     const meta = commonMetaData;

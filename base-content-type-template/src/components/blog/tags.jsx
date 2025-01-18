@@ -1,22 +1,6 @@
 import Link from "next/link";
 import React from "react";
 
-//  tags data
-const tags = [
-  { name: "Creative" },
-  { name: "Consultant" },
-  { name: "Technology" },
-  { name: "Social Media" },
-  { name: "Photography" },
-  { name: "Music" },
-  { name: "Ecommerce" },
-  { name: "Food" },
-  { name: "Travel" },
-  { name: "News" },
-  { name: "Crypto" },
-  { name: "Real Estate" },
-];
-
 const Tags = ({categories}) => {
   return (
     <>

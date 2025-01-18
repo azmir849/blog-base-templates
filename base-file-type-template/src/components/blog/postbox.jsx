@@ -9,7 +9,7 @@ import { Box, Pagination } from "@mui/material";
 import Image from "next/image";
 
 
-const ITEMS_PER_PAGE = 4;
+const ITEMS_PER_PAGE = Number(process.env.NEXT_PUBLIC_ITEM_PER_PAGE) ;
 const Postbox = ({ posts, catPosts, categories }) => {
   const [currentPage, setCurrentPage] = useState(1);
 

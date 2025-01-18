@@ -1,10 +1,9 @@
 import SEO from "@/src/common/seo";
 import BlogDetails from "@/src/components/blog-details";
-import Wrapper2 from "@/src/layout/wrapper-2";
+import Wrapper2 from "@/src/layout/wrapper";
 import {
   allcategoryUrl,
   allpostsUrl,
-  filterpostsUrl,
   singlePostUrl,
   tagpostsUrl,
 } from "@/utils/api/api";
@@ -12,14 +11,15 @@ import { useRouter } from "next/router";
 import React from "react";
 
 const index = ({ posts, categories, postDetails, relatedPosts }) => {
+  const metaDetails = postDetails?.posts;
   const router = useRouter();
   const url = router.asPath;
   return (
     <Wrapper2 categories={categories.categorys}>
       <SEO
-        title={postDetails?.title}
-        description={postDetails?.description}
-        image={postDetails?.image}
+        title={metaDetails?.title}
+        description={metaDetails?.description}
+        image={metaDetails?.image}
         url={url}
       />
       <BlogDetails

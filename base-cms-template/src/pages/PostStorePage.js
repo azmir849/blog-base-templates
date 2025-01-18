@@ -115,58 +115,58 @@ export default function PostStorePage() {
 
   const [categories, setCategories] = useState([])
   const defaultValues = {
-    catId: '',
-    headerId: '',
-    filterId: '',
+    catId: null,
+    headerId: null,
+    filterId: null,
 
-    title: location?.state?.row?.title?location?.state?.row?.title: '',
-    slug: location?.state?.row?.slug?location?.state?.row?.slug: '',
-    description: location?.state?.row?.title?location?.state?.row?.description: '',
-    featuredImage:'',
+    title: location?.state?.row?.title?location?.state?.row?.title: null,
+    slug: location?.state?.row?.slug?location?.state?.row?.slug: null,
+    description: location?.state?.row?.title?location?.state?.row?.description: null,
+    featuredImage:null,
 
-    previewTitle1: location?.state?.row?.preview_title_1?location?.state?.row?.preview_title_1: '',
-    previewTitle2: location?.state?.row?.preview_title_2?location?.state?.row?.preview_title_2: '',
-    previewTitle3: location?.state?.row?.preview_title_3?location?.state?.row?.preview_title_3: '',
-    previewTitle4: location?.state?.row?.preview_title_4?location?.state?.row?.preview_title_4: '',
-    previewTitle5: location?.state?.row?.preview_title_5?location?.state?.row?.preview_title_5: '',
-    previewTitle6: location?.state?.row?.preview_title_6?location?.state?.row?.preview_title_6: '',
-    previewTitle7: location?.state?.row?.preview_title_7?location?.state?.row?.preview_title_7: '',
-    previewTitle8: location?.state?.row?.preview_title_8?location?.state?.row?.preview_title_8: '',
-    previewTitle9: location?.state?.row?.preview_title_9?location?.state?.row?.preview_title_9: '',
-    previewTitle10: location?.state?.row?.preview_title_10?location?.state?.row?.preview_title_10: '',
-    previewTitle11: location?.state?.row?.preview_title_11?location?.state?.row?.preview_title_11: '',
-    previewTitle12: location?.state?.row?.preview_title_12?location?.state?.row?.preview_title_12: '',
+    previewTitle1: location?.state?.row?.preview_title_1?location?.state?.row?.preview_title_1: null,
+    previewTitle2: location?.state?.row?.preview_title_2?location?.state?.row?.preview_title_2: null,
+    previewTitle3: location?.state?.row?.preview_title_3?location?.state?.row?.preview_title_3: null,
+    previewTitle4: location?.state?.row?.preview_title_4?location?.state?.row?.preview_title_4: null,
+    previewTitle5: location?.state?.row?.preview_title_5?location?.state?.row?.preview_title_5: null,
+    previewTitle6: location?.state?.row?.preview_title_6?location?.state?.row?.preview_title_6: null,
+    previewTitle7: location?.state?.row?.preview_title_7?location?.state?.row?.preview_title_7: null,
+    previewTitle8: location?.state?.row?.preview_title_8?location?.state?.row?.preview_title_8: null,
+    previewTitle9: location?.state?.row?.preview_title_9?location?.state?.row?.preview_title_9: null,
+    previewTitle10: location?.state?.row?.preview_title_10?location?.state?.row?.preview_title_10: null,
+    previewTitle11: location?.state?.row?.preview_title_11?location?.state?.row?.preview_title_11: null,
+    previewTitle12: location?.state?.row?.preview_title_12?location?.state?.row?.preview_title_12: null,
 
-    key_f_1: location?.state?.row?.key_f_1?location?.state?.row?.key_f_1: '',
-    key_f_2: location?.state?.row?.key_f_2?location?.state?.row?.key_f_2: '',
-    key_f_3: location?.state?.row?.key_f_3?location?.state?.row?.key_f_3: '',
-    key_f_4: location?.state?.row?.key_f_4?location?.state?.row?.key_f_4: '',
-    key_f_5: location?.state?.row?.key_f_5?location?.state?.row?.key_f_5: '',
-    key_f_6: location?.state?.row?.key_f_6?location?.state?.row?.key_f_6: '',
-    key_f_7: location?.state?.row?.key_f_7?location?.state?.row?.key_f_7: '',
-    key_f_8: location?.state?.row?.key_f_8?location?.state?.row?.key_f_8: '',
+    key_f_1: location?.state?.row?.key_f_1?location?.state?.row?.key_f_1: null,
+    key_f_2: location?.state?.row?.key_f_2?location?.state?.row?.key_f_2: null,
+    key_f_3: location?.state?.row?.key_f_3?location?.state?.row?.key_f_3: null,
+    key_f_4: location?.state?.row?.key_f_4?location?.state?.row?.key_f_4: null,
+    key_f_5: location?.state?.row?.key_f_5?location?.state?.row?.key_f_5: null,
+    key_f_6: location?.state?.row?.key_f_6?location?.state?.row?.key_f_6: null,
+    key_f_7: location?.state?.row?.key_f_7?location?.state?.row?.key_f_7: null,
+    key_f_8: location?.state?.row?.key_f_8?location?.state?.row?.key_f_8: null,
     
-    previewImage1: '',
-    previewImage2: '',
-    previewImage3: '',
-    previewImage4: '',
-    previewImage5: '',
-    previewImage6: '',
-    previewImage7: '',
-    previewImage8: '',
-    previewImage9: '',
-    previewImage10: '',
-    previewImage11: '',
-    previewImage12: '',
+    previewImage1: null,
+    previewImage2: null,
+    previewImage3: null,
+    previewImage4: null,
+    previewImage5: null,
+    previewImage6: null,
+    previewImage7: null,
+    previewImage8: null,
+    previewImage9: null,
+    previewImage10: null,
+    previewImage11: null,
+    previewImage12: null,
 
-    fileUrl: location?.state?.row?.file_url?location?.state?.row?.file_url: '',
-    previewUrl: location?.state?.row?.preview_url?location?.state?.row?.preview_url: '',
-    readingTime: location?.state?.row?.read_time?location?.state?.row?.read_time: '',
-    gifFile: '',
+    fileUrl: location?.state?.row?.file_url?location?.state?.row?.file_url: null,
+    previewUrl: location?.state?.row?.preview_url?location?.state?.row?.preview_url: null,
+    readingTime: location?.state?.row?.read_time?location?.state?.row?.read_time: null,
+    gifFile: null,
 
-    authorName: location?.state?.row?.author_name?location?.state?.row?.author_name: '',
-    authorUrl: location?.state?.row?.author_url?location?.state?.row?.author_url: '',
-    other: location?.state?.row?.others?location?.state?.row?.others: '',
+    authorName: location?.state?.row?.author_name?location?.state?.row?.author_name: null,
+    authorUrl: location?.state?.row?.author_url?location?.state?.row?.author_url: null,
+    other: location?.state?.row?.others?location?.state?.row?.others: null,
     
   };
   const methods = useForm({defaultValues});
@@ -619,7 +619,7 @@ export default function PostStorePage() {
                       <Stack spacing={2}>
                         <Card sx={{p:2}}>
                           <Box sx={{ mb: 2, mt: 2,minHeight:165 }} >
-                            {values.featuredImage !=='' 
+                            {values.featuredImage !==null 
                               && <img src={URL.createObjectURL(values.featuredImage)} alt="" />
                             }
                           </Box>
@@ -710,7 +710,7 @@ export default function PostStorePage() {
                       <Card sx={{ p: 2 }}>
                         <Stack sx={{minHeight:35}} >
                           <Box display='flex' justifyContent='center' justifyItems='center'>
-                            {values.previewImage1 !=='' 
+                            {values.previewImage1 !==null 
                               && <img src={URL.createObjectURL(values.previewImage1)} width='50%' alt="" />
                             }
                           </Box>
@@ -764,7 +764,7 @@ export default function PostStorePage() {
                             <Card sx={{ p: 2 }}>
                             <Stack sx={{minHeight:35}} >
                                 <Box display='flex' justifyContent='center' justifyItems='center'>
-                                  {values.previewImage2 !=='' 
+                                  {values.previewImage2 !==null 
                                       && <img src={URL.createObjectURL(values.previewImage2)} width='50%' alt="" />
                                     }
                                 </Box>
@@ -816,7 +816,7 @@ export default function PostStorePage() {
                             <Card sx={{ p: 2 }}>
                             <Stack sx={{minHeight:35}} >
                                 <Box display='flex' justifyContent='center' justifyItems='center'>
-                                  {values.previewImage3 !=='' 
+                                  {values.previewImage3 !==null 
                                       && <img src={URL.createObjectURL(values.previewImage3)} width='50%' alt="" />
                                     }
                                 </Box>
@@ -868,7 +868,7 @@ export default function PostStorePage() {
                             <Card sx={{ p: 2 }}>
                             <Stack sx={{minHeight:35}} >
                                 <Box display='flex' justifyContent='center' justifyItems='center'>
-                                  {values.previewImage4 !=='' 
+                                  {values.previewImage4 !==null 
                                       && <img src={URL.createObjectURL(values.previewImage4)} width='50%' alt="" />
                                     }
                                 </Box>
@@ -920,7 +920,7 @@ export default function PostStorePage() {
                             <Card sx={{ p: 2 }}>
                             <Stack sx={{minHeight:35}} >
                                 <Box display='flex' justifyContent='center' justifyItems='center'>
-                                  {values.previewImage5 !=='' 
+                                  {values.previewImage5 !==null 
                                       && <img src={URL.createObjectURL(values.previewImage5)} width='50%' alt="" />
                                     }
                                 </Box>
@@ -972,7 +972,7 @@ export default function PostStorePage() {
                             <Card sx={{ p: 2 }}>
                             <Stack sx={{minHeight:35}} >
                                 <Box display='flex' justifyContent='center' justifyItems='center'>
-                                  {values.previewImage6 !=='' 
+                                  {values.previewImage6 !==null 
                                       && <img src={URL.createObjectURL(values.previewImage6)} width='50%' alt="" />
                                     }
                                 </Box>
@@ -1024,7 +1024,7 @@ export default function PostStorePage() {
                             <Card sx={{ p: 2 }}>
                             <Stack sx={{minHeight:35}} >
                                 <Box display='flex' justifyContent='center' justifyItems='center'>
-                                  {values.previewImage7 !=='' 
+                                  {values.previewImage7 !==null 
                                       && <img src={URL.createObjectURL(values.previewImage7)} width='50%' alt="" />
                                     }
                                 </Box>
@@ -1076,7 +1076,7 @@ export default function PostStorePage() {
                             <Card sx={{ p: 2 }}>
                             <Stack sx={{minHeight:35}} >
                                 <Box display='flex' justifyContent='center' justifyItems='center'>
-                                  {values.previewImage8 !=='' 
+                                  {values.previewImage8 !==null 
                                       && <img src={URL.createObjectURL(values.previewImage8)} width='50%' alt="" />
                                     }
                                 </Box>
@@ -1128,7 +1128,7 @@ export default function PostStorePage() {
                             <Card sx={{ p: 2 }}>
                             <Stack sx={{minHeight:35}} >
                                 <Box display='flex' justifyContent='center' justifyItems='center'>
-                                  {values.previewImage9 !=='' 
+                                  {values.previewImage9 !==null 
                                       && <img src={URL.createObjectURL(values.previewImage9)} width='50%' alt="" />
                                     }
                                 </Box>
@@ -1180,7 +1180,7 @@ export default function PostStorePage() {
                             <Card sx={{ p: 2 }}>
                             <Stack sx={{minHeight:35}} >
                                 <Box display='flex' justifyContent='center' justifyItems='center'>
-                                  {values.previewImage10 !=='' 
+                                  {values.previewImage10 !==null 
                                       && <img src={URL.createObjectURL(values.previewImage10)} width='50%' alt="" />
                                     }
                                 </Box>
@@ -1232,7 +1232,7 @@ export default function PostStorePage() {
                             <Card sx={{ p: 2 }}>
                             <Stack sx={{minHeight:35}} >
                                 <Box display='flex' justifyContent='center' justifyItems='center'>
-                                  {values.previewImage11 !=='' 
+                                  {values.previewImage11 !==null 
                                       && <img src={URL.createObjectURL(values.previewImage11)} width='50%' alt="" />
                                     }
                                 </Box>
@@ -1284,7 +1284,7 @@ export default function PostStorePage() {
                             <Card sx={{ p: 2 }}>
                             <Stack sx={{minHeight:35}} >
                                 <Box display='flex' justifyContent='center' justifyItems='center'>
-                                  {values.previewImage12 !=='' 
+                                  {values.previewImage12 !==null 
                                       && <img src={URL.createObjectURL(values.previewImage12)} width='50%' alt="" />
                                     }
                                 </Box>

@@ -53773,6 +53773,9 @@ a.meanmenu-reveal {
 .postbox__text-single p {
   margin-bottom: 15px;
 }
+.postbox__description div span {
+  font-size: 14px !important;
+}
 .postbox__slider .slick-arrow {
   position: absolute;
   left: 50px;

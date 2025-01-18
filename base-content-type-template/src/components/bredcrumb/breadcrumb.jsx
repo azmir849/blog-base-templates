@@ -1,7 +1,6 @@
-import Link from "next/link";
 import React from "react";
 
-const Breadcrumb = ({ title, subtitle, isDbbl = "" }) => {
+const Breadcrumb = ({ title}) => {
   function formatText(input) {
     const words = input.replace(/-/g, ' ').split(' ');
       const formattedText = words.map(word => {

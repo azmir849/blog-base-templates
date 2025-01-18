@@ -1,7 +1,7 @@
-import { allcategoryUrl, allpostsUrl, searchPostUrl } from "@/utils/api/api";
+import { allcategoryUrl, searchPostUrl } from "@/utils/api/api";
 import SEO from '@/src/common/seo';
 import Blog from '@/src/components/blog';
-import WrapperTwo from '@/src/layout/wrapper-2';
+import WrapperTwo from '@/src/layout/wrapper';
 import { commonMetaData } from "@/src/common/commonMetaData";
 import { useRouter } from "next/router";
 

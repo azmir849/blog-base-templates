@@ -3,22 +3,22 @@
 return [
 
     /*
-    |--------------------------------------------------------------------------
+    |-------------------------------------------------------------------------- 
     | Default Filesystem Disk
-    |--------------------------------------------------------------------------
+    |-------------------------------------------------------------------------- 
     |
-    | Here you may specify the default filesystem disk that should be used
+    | Here you may specify the default filesystem disk that should be used 
     | by the framework. The "local" disk, as well as a variety of cloud
     | based disks are available to your application. Just store away!
     |
     */
 
-    'default' => env('FILESYSTEM_DISK', 'local'),
+    'default' => env('FILESYSTEM_DISK', 'public'), // Change default to 'public' for convenience
 
     /*
-    |--------------------------------------------------------------------------
+    |-------------------------------------------------------------------------- 
     | Filesystem Disks
-    |--------------------------------------------------------------------------
+    |-------------------------------------------------------------------------- 
     |
     | Here you may configure as many filesystem "disks" as you wish, and you
     | may even configure multiple disks of the same driver. Defaults have
@@ -32,15 +32,15 @@ return [
 
         'local' => [
             'driver' => 'local',
-            'root' => storage_path('/'),
+            'root' => storage_path('app'),  // The root path for the 'local' disk is typically 'storage/app'
             'throw' => false,
         ],
 
         'public' => [
             'driver' => 'local',
-            'root' => storage_path('/'),
-            'url' => env('APP_URL').'/public',
-            'visibility' => 'public',
+            'root' => public_path('/storage'),  // Storing directly in the public folder
+            'url' => env('APP_URL') . '/',  // URL for accessing stored files
+            'visibility' => 'public',  // Files are publicly accessible
             'throw' => false,
         ],
 
@@ -59,9 +59,9 @@ return [
     ],
 
     /*
-    |--------------------------------------------------------------------------
+    |-------------------------------------------------------------------------- 
     | Symbolic Links
-    |--------------------------------------------------------------------------
+    |-------------------------------------------------------------------------- 
     |
     | Here you may configure the symbolic links that will be created when the
     | `storage:link` Artisan command is executed. The array keys should be
@@ -70,7 +70,7 @@ return [
     */
 
     'links' => [
-        public_path('storage') => storage_path('/'),
+        public_path('storage') => storage_path('app/public'),  // Correct the symbolic link target
     ],
 
 ];

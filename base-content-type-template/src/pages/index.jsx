@@ -1,8 +1,7 @@
 import { allcategoryUrl, allpostsUrl } from "@/utils/api/api";
 import SEO from "../common/seo";
 import Blog from "../components/blog";
-import Home from "../components/homes/home";
-import Wrapper2 from "../layout/wrapper-2";
+import Wrapper2 from "../layout/wrapper";
 import CookieConsent from "react-cookie-consent";
 import { useRouter } from "next/router";
 import { commonMetaData } from "../common/commonMetaData";

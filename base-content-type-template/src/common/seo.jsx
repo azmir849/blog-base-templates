@@ -3,7 +3,7 @@ import Head from "next/head";
 const SEO = ({ title, description, image, url }) => (
   <>
     <Head>
-      <title>{title} - Your Website</title>
+      <title>{`${title} - Your Website`}</title>
       <meta name="description" content={description} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta charSet="UTF-8" />
@@ -39,8 +39,6 @@ const SEO = ({ title, description, image, url }) => (
         }}
       />
     </Head>
-
-    
   </>
 );
 
