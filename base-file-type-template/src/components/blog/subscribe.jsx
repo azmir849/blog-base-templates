@@ -33,7 +33,6 @@ const Subscribe = () => {
     <>
       <div className="sidebar__widget mb-25">
         <div className="sidebar__widget-content">
-          {/* <h3 className="sidebar__widget-title mb-10 text-center">Subscribe to domainname.com</h3> */}
           <p className="sidebar__widget-title mb-30 text-center">Get the latest posts delivered right to your inbox</p>
           <div className="sidebar__search">
             <form  onSubmit={(e) =>handleSubscripe(e)}>
@@ -41,7 +40,6 @@ const Subscribe = () => {
                 <input className="email-input" type="text" placeholder="email@examp.com" value={email} onChange={(e)=> setEmail(e.target.value)} />
                 <button type="submit">
                   Subscribe
-                  {/* <i className="far fa-submit"></i> */}
                 </button>
               </div>
             </form>

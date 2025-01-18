@@ -1,23 +1,13 @@
-import blog_page_data from "@/src/data/blog-page-data";
-import VideoPopup from "@/src/modals/video-popup";
 import Link from "next/link";
-import { useState, useRef } from "react";
-import Slider from "react-slick";
-import BlogSearch from "./blog-search";
+import { useState } from "react";
 import Category from "./category";
 import RecentPost from "./recent-post";
 import Tags from "./tags";
 import Subscribe from "./subscribe";
 import { baseUrl } from "@/utils/api/api";
-import parse from "html-react-parser";
 import { Box, Pagination } from "@mui/material";
 import Image from "next/image";
-const setting = {
-  infinite: true,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  arrows: false,
-};
+
 
 const ITEMS_PER_PAGE = 4;
 const Postbox = ({ posts, catPosts, categories }) => {

@@ -1,4 +1,3 @@
-import our_course_data from "@/src/data/our-course-data";
 import { baseUrl } from "@/utils/api/api";
 import Image from "next/image";
 import Link from "next/link";

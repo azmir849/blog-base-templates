@@ -1,8 +1,7 @@
-import Link from "next/link";
 import React from "react";
 import SEO from "../common/seo";
 import ErrorPage from "../components/error";
-import WrapperTwo from "../layout/wrapper-2";
+import WrapperTwo from "../layout/wrapper";
 
 const Error = () => {
   return (

@@ -1,2 +1,44 @@
+# Laravel & general files to ignore
+/vendor
 /node_modules
-**node_modules
+# /public/storage
+# /storage/*.key
+# /.env
+# /.env.*.local
+/.vscode
+.idea
+.phpunit.result.cache
+Homestead.yaml
+Homestead.json
+# .env.local
+# .env.development.local
+# .env.testing.local
+
+# Laravel Debugbar (if installed)
+/_ide_helper.php
+/_ide_helper_models.php
+/_ide_helper.php.bak
+
+# Composer
+composer.lock
+
+# NPM
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# JetBrains IDEs
+*.iml

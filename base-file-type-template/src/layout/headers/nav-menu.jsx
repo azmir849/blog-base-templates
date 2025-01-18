@@ -1,7 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import menu_data from "./menu-data";
-import { allcategoryUrl, allpostsUrl } from "@/utils/api/api";
+import { allcategoryUrl } from "@/utils/api/api";
 
 const NavMenu = ({categories}) => {
  
@@ -42,18 +41,3 @@ export async function getStaticProps() {
       revalidate: 10,
   };
 }
-
-{/* <ul>
-{menu_data.map((item) => (
-  <li key={item.id} className="has-dropdown">
-    <Link href={item.link}>{item.title}</Link>
-    <ul className="submenu">
-      {item.sub_menus.map((sub, i) => (
-        <li key={i}>
-          <Link href={sub.link}>{sub.title}</Link>
-        </li>
-      ))}
-    </ul>
-  </li>
-))}
-</ul> */}

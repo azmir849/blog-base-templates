@@ -30,7 +30,6 @@ const BlogSearch = ({ generateValue, setShowSearch }) => {
     <>
       <div className="sidebar__widget ml-5 ">
         <div className="sidebar__widget-content">
-          {/* <h3 className="sidebar__widget-title mb-25">Search</h3> */}
           <div className="sidebar__search">
             <form onSubmit={(e) => handleSearch(e)}>
               <div className="sidebar__search-input-2">

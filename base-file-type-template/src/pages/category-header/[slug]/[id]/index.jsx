@@ -1,12 +1,11 @@
 import { commonMetaData } from "@/src/common/commonMetaData";
 import SEO from "@/src/common/seo";
 import Blog from "@/src/components/blog";
-import WrapperTwo from "@/src/layout/wrapper-2";
+import WrapperTwo from "@/src/layout/wrapper";
 import {
   allcategoryUrl,
   allpostsUrl,
   headerpostsUrl,
-  tagpostsUrl,
 } from "@/utils/api/api";
 import { useRouter } from "next/router";
 import React from "react";

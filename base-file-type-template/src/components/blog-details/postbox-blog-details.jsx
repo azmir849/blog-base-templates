@@ -1,7 +1,5 @@
-import comments_data from "@/src/data/comments-data";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import BlogSearch from "../blog/blog-search";
 import Category from "../blog/category";
 import RecentPost from "../blog/recent-post";
 import Tags from "../blog/tags";
@@ -16,20 +14,13 @@ import Avatar from "react-avatar";
 
 import {
   FacebookIcon,
-  FacebookMessengerIcon,
   LinkedinIcon,
-  PinterestIcon,
-  TwitterIcon,
-  ViberIcon,
   WhatsappIcon,
   EmailIcon,
   XIcon,
   TelegramIcon,
   FacebookShareButton,
-  InstapaperShareButton,
-  InstapaperIcon,
   LinkedinShareButton,
-  PinterestShareButton,
   TwitterShareButton,
   WhatsappShareButton,
   EmailShareButton,
@@ -48,7 +39,6 @@ const PostboxBlogDetails = ({
   const getDate = new Date(post?.created_at);
   const options = { year: "numeric", month: "short", day: "numeric" };
   const postDate = getDate?.toLocaleDateString("en-US", options);
-  const [previewUrl, setPreviewUrl] = useState(null);
 
   const [count, setCount] = useState(0);
   const [parentId, setParentId] = useState(0);
@@ -338,7 +328,6 @@ const PostboxBlogDetails = ({
                 <LinkedinShareButton style={{ margin: "3px" }} url={shareUrl}>
                   <LinkedinIcon size={32} round={true} />
                 </LinkedinShareButton>
-                {/* <PinterestShareButton style={{margin:'3px'}} url={shareUrl}><PinterestIcon size={32} round={true} /></PinterestShareButton> */}
                 <TwitterShareButton style={{ margin: "3px" }} url={shareUrl}>
                   <XIcon size={32} round={true} />
                 </TwitterShareButton>
