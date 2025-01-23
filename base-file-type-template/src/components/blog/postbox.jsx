@@ -7,9 +7,12 @@ import Subscribe from "./subscribe";
 import { baseUrl } from "@/utils/api/api";
 import { Box, Pagination } from "@mui/material";
 import Image from "next/image";
+import parser from "html-react-parser";
 
 
 const ITEMS_PER_PAGE = Number(process.env.NEXT_PUBLIC_ITEM_PER_PAGE) ;
+const descriptionLimit = Number(process.env.NEXT_PUBLIC_DESCRIPTION_LIMIT) ;
+
 const Postbox = ({ posts, catPosts, categories }) => {
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -47,6 +50,9 @@ const Postbox = ({ posts, catPosts, categories }) => {
                       "en-US",
                       options
                     );
+
+                    const croppedDes = post?.description.substring(0,descriptionLimit)
+                    const description = `${croppedDes} <span className='read-more'> ... Read More</span>`
 
                     return (
                       <div className="row blogcard__wrapper" key={post.id}>
@@ -88,28 +94,10 @@ const Postbox = ({ posts, catPosts, categories }) => {
                                   {post?.title}
                                 </Link>
                               </h3>
-                              <div className="postbox__text mb-1">
-                                <ul>
-                                  {post?.key_f_1 && (
-                                    <li>
-                                      {" "}
-                                      <i className="fa-light fa-check-double"></i>{" "}
-                                      {post?.key_f_1}
-                                    </li>
-                                  )}
-                                  {post?.key_f_2 && (
-                                    <li>
-                                      {" "}
-                                      <i className="fa-light fa-check-double"></i>{" "}
-                                      {post?.key_f_2} ...{" "}
-                                      <Link
-                                        href={`post/${post?.slug}/${post.id}`}
-                                      >
-                                        (More)
-                                      </Link>
-                                    </li>
-                                  )}
-                                </ul>
+                              <div className="postbox__text postbox__description mb-1">
+                                <Link href={`/post/${post?.slug}/${post.id}`}>
+                                  {description && <>{parser(description)}</>}
+                                </Link>
                               </div>
                               <div className="postbox__meta">
                                 <span>

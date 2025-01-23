@@ -99,7 +99,9 @@ const Postbox = ({ posts, catPosts, categories }) => {
                                 </Link>
                               </h3>
                               <div className="postbox__text postbox__description mb-1">
-                                {description && <>{parser(description)}</>}
+                                <Link href={`/post/${post?.slug}/${post.id}`}>
+                                  {description && <>{parser(description)}</>}
+                                </Link>
                               </div>
                               <div className="postbox__meta">
                                 <span>

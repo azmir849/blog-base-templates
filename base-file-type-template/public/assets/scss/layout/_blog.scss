@@ -284,6 +284,19 @@
             }
         }
     }
+    &__description{
+        & h6 {
+            & span{
+                font-size: 14px !important;
+            }
+        }
+        .read-more {
+            color: var(--tp-heading-secondary);
+            cursor: pointer;
+            // text-decoration: underline;
+            margin-left: 5px;
+          }
+    }
     &__slider{
         & .slick-arrow{
             position: absolute;

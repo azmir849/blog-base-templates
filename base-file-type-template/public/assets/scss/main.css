@@ -53773,6 +53773,14 @@ a.meanmenu-reveal {
 .postbox__text-single p {
   margin-bottom: 15px;
 }
+.postbox__description h6 span {
+  font-size: 14px !important;
+}
+.postbox__description .read-more {
+  color: var(--tp-heading-secondary);
+  cursor: pointer;
+  margin-left: 5px;
+}
 .postbox__slider .slick-arrow {
   position: absolute;
   left: 50px;
