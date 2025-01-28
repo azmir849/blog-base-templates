@@ -53717,6 +53717,7 @@ a.meanmenu-reveal {
 .postbox__title {
   font-size: 22px;
   margin-bottom: 20px;
+  line-height: 1.7;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .postbox__title {
@@ -53773,8 +53774,55 @@ a.meanmenu-reveal {
 .postbox__text-single p {
   margin-bottom: 15px;
 }
+.postbox__description h6 {
+  font-size: 14px;
+  word-spacing: 2px;
+  line-break: auto;
+  line-height: inherit;
+  color: #6f7172;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .postbox__description h6 {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .postbox__description h6 {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .postbox__description h6 {
+    font-size: 12px;
+  }
+}
+@media (max-width: 767px) {
+  .postbox__description h6 {
+    font-size: 12px;
+  }
+}
 .postbox__description h6 span {
-  font-size: 14px !important;
+  font-size: 14px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .postbox__description h6 span {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .postbox__description h6 span {
+    font-size: 12px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .postbox__description h6 span {
+    font-size: 12px;
+  }
+}
+@media (max-width: 767px) {
+  .postbox__description h6 span {
+    font-size: 12px;
+  }
 }
 .postbox__description .read-more {
   color: var(--tp-heading-secondary);
@@ -53999,8 +54047,9 @@ a.meanmenu-reveal {
 }
 .rc__post-title {
   margin-bottom: 6px;
-  font-size: 17px;
-  line-height: 1.7;
+  font-size: 14px;
+  color: #6f7172;
+  line-height: inherit;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px) {
   .rc__post-title {

@@ -18,7 +18,7 @@ const index = ({ posts, categories, postDetails, relatedPosts }) => {
     <Wrapper2 categories={categories.categorys}>
       <SEO
         title={metaDetails?.title}
-        description={metaDetails?.description}
+        description={metaDetails?.meta_des}
         image={metaDetails?.image}
         url={url}
       />

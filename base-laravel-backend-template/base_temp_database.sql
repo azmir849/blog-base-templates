@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 18, 2025 at 01:16 PM
+-- Generation Time: Jan 28, 2025 at 03:20 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `api_figma`
+-- Database: `base_temp_database`
 --
 
 -- --------------------------------------------------------
@@ -46,7 +46,7 @@ INSERT INTO `categories` (`id`, `category_name`, `category_position`, `status`, 
 (1, 'Websites', 'header', 1, '2023-07-20 10:37:38', '2023-07-20 10:59:48', 0, 'website'),
 (2, 'Mobile Apps', 'header', 1, '2023-07-20 10:38:27', '2023-10-27 10:27:51', 0, 'mobile-apps'),
 (3, 'Dashboards', 'tag', 1, '2023-07-20 10:38:43', '2025-01-17 12:26:18', 2, 'dashboards'),
-(4, 'Landing Pages', 'tag', 1, '2023-07-20 11:06:17', '2025-01-17 12:25:22', 12, 'landing-pages'),
+(4, 'Landing Pages', 'tag', 1, '2023-07-20 11:06:17', '2025-01-27 20:09:21', 13, 'landing-pages'),
 (5, 'Creative', 'filter', 1, '2023-07-20 11:06:38', '2023-07-20 11:06:38', 0, 'creative'),
 (6, 'Consultantt', 'filter', 1, '2023-07-20 11:06:47', '2023-10-27 10:27:18', 0, 'consultantt');
 
@@ -180,7 +180,8 @@ CREATE TABLE `personal_access_tokens` (
 INSERT INTO `personal_access_tokens` (`id`, `tokenable_type`, `tokenable_id`, `name`, `token`, `abilities`, `last_used_at`, `created_at`, `updated_at`) VALUES
 (1, 'App\\Models\\User', 1, 'token', 'da93d97f068119cf17c44c6ed20e081b7146178d266c336913af62ac3c51a4c5', '[\"*\"]', '2025-01-17 14:02:27', '2025-01-17 11:31:06', '2025-01-17 14:02:27'),
 (2, 'App\\Models\\User', 1, 'token', 'd7c874e9b5b92e019bc596a4351341aa746fe20743a49a4b4762a9ad11ad87af', '[\"*\"]', '2025-01-17 21:48:21', '2025-01-17 21:48:15', '2025-01-17 21:48:21'),
-(3, 'App\\Models\\User', 1, 'token', '91934afb0e6bc10df1a6e8f6e432ae8216f43f0414c834642338aebb3c99e814', '[\"*\"]', '2025-01-18 04:52:32', '2025-01-18 00:18:06', '2025-01-18 04:52:32');
+(3, 'App\\Models\\User', 1, 'token', '91934afb0e6bc10df1a6e8f6e432ae8216f43f0414c834642338aebb3c99e814', '[\"*\"]', '2025-01-18 04:52:32', '2025-01-18 00:18:06', '2025-01-18 04:52:32'),
+(4, 'App\\Models\\User', 1, 'token', '2a8496b02bbf05402a87f8e9c751a4b05d640c237e2d316098402de73975e9fe', '[\"*\"]', '2025-01-27 20:19:24', '2025-01-27 19:48:59', '2025-01-27 20:19:24');
 
 -- --------------------------------------------------------
 
@@ -197,6 +198,7 @@ CREATE TABLE `posts` (
   `image` varchar(255) NOT NULL,
   `title` text NOT NULL,
   `slug` text NOT NULL,
+  `meta_des` text NOT NULL,
   `description` text NOT NULL,
   `preview_title_1` text NOT NULL,
   `preview_title_2` text NOT NULL,
@@ -245,9 +247,10 @@ CREATE TABLE `posts` (
 -- Dumping data for table `posts`
 --
 
-INSERT INTO `posts` (`id`, `cat_id`, `header_id`, `filter_id`, `read_time`, `image`, `title`, `slug`, `description`, `preview_title_1`, `preview_title_2`, `preview_title_3`, `preview_title_4`, `preview_title_5`, `preview_title_6`, `preview_title_7`, `preview_title_8`, `preview_title_9`, `preview_title_10`, `preview_title_11`, `preview_title_12`, `preview_image_1`, `preview_image_2`, `preview_image_3`, `preview_image_4`, `preview_image_5`, `preview_image_6`, `preview_image_7`, `preview_image_8`, `preview_image_9`, `preview_image_10`, `preview_image_11`, `preview_image_12`, `key_f_1`, `key_f_2`, `key_f_3`, `key_f_4`, `key_f_5`, `key_f_6`, `key_f_7`, `key_f_8`, `file_url`, `preview_url`, `gif_file`, `author_name`, `author_url`, `others`, `views`, `created_at`, `updated_at`) VALUES
-(1, 3, 1, 6, 1, 'posts/ppcfF0SDOt95cEaLQg5PecYbkALNVS6PLw3T9Log.png', 'dhgfdf dfhvdfdvfd ffdbfbdf', 'dhgfdf-dfhvdfdvfd-ffdbfbdf', '<p>dfdbfd fd d fdfd fhd fd&nbsp;</p>', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'posts/kXbChyZlANV133EnkdEwRY1McK5HqxTmLKX7DYP9.png', 'posts/0nGnmSHkVaW9Yxqqz1N5KJOvbZRN3rt0a5HMdFv1.png', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'f1', 'f2f', 'f3', 'null', 'null', 'null', 'null', 'null', 'https://pixabay.com/photos/flowers-meadow-sunlight-summer-276014/', 'https://pixabay.com/photos/flowers-meadow-sunlight-summer-276014/', 'posts/rWk783iAc880fQUKEakYXw5W7LSAi9RvR81Q8YEL.png', 'ah', 'https://pixabay.com/photos/flowers-meadow-sunlight-summer-276014/', 'https://pixabay.com/photos/flowers-meadow-sunlight-summer-276014/', 11, '2025-01-17 11:33:16', '2025-01-18 04:08:13'),
-(2, 3, 1, 6, 45, 'posts/jJ1RGTcTH8eoqRmPO6XjGR3hRatrchJq2YDhTprA.png', 'Tempora cumque molli', 'Quae ea aliqua Reic', '<p>Dolor hic laborum la.</p>', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'Vitae autem nesciunt', 'Aut sint esse labo', 'Molestiae in recusan', 'Autem libero aut cum', 'Maxime laboris conse', 'Ad quam nostrud labo', 'Sit commodo quia hic', 'Porro rem dolor blan', 'https://pixabay.com/photos/flowers-meadow-sunlight-summer-276014/', 'https://drive.google.com/file/d/1u_w8GvC4lMznpFlRMP4LMIk3LiZd_TtE/view?usp=sharing', 'posts/cfNHDvQxxWCWi9Vz3eT0Qas9WHnenwhtoaYv5yPm.png', 'Gage Michael', 'Occaecat Nam officii', 'Enim dolores occaeca', 38, '2025-01-17 12:26:18', '2025-01-18 05:43:47');
+INSERT INTO `posts` (`id`, `cat_id`, `header_id`, `filter_id`, `read_time`, `image`, `title`, `slug`, `meta_des`, `description`, `preview_title_1`, `preview_title_2`, `preview_title_3`, `preview_title_4`, `preview_title_5`, `preview_title_6`, `preview_title_7`, `preview_title_8`, `preview_title_9`, `preview_title_10`, `preview_title_11`, `preview_title_12`, `preview_image_1`, `preview_image_2`, `preview_image_3`, `preview_image_4`, `preview_image_5`, `preview_image_6`, `preview_image_7`, `preview_image_8`, `preview_image_9`, `preview_image_10`, `preview_image_11`, `preview_image_12`, `key_f_1`, `key_f_2`, `key_f_3`, `key_f_4`, `key_f_5`, `key_f_6`, `key_f_7`, `key_f_8`, `file_url`, `preview_url`, `gif_file`, `author_name`, `author_url`, `others`, `views`, `created_at`, `updated_at`) VALUES
+(1, 3, 1, 6, 1, 'posts/ppcfF0SDOt95cEaLQg5PecYbkALNVS6PLw3T9Log.png', 'dhgfdf dfhvdfdvfd ffdbfbdf', 'dhgfdf-dfhvdfdvfd-ffdbfbdf', 'dhgfdf-dfhvdfdvfd-ffdbfbdf', '<p>dfdbfd fd d fdfd fhd fd&nbsp;</p>', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'posts/kXbChyZlANV133EnkdEwRY1McK5HqxTmLKX7DYP9.png', 'posts/0nGnmSHkVaW9Yxqqz1N5KJOvbZRN3rt0a5HMdFv1.png', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'f1', 'f2f', 'f3', 'null', 'null', 'null', 'null', 'null', 'https://pixabay.com/photos/flowers-meadow-sunlight-summer-276014/', 'https://pixabay.com/photos/flowers-meadow-sunlight-summer-276014/', 'posts/rWk783iAc880fQUKEakYXw5W7LSAi9RvR81Q8YEL.png', 'ah', 'https://pixabay.com/photos/flowers-meadow-sunlight-summer-276014/', 'https://pixabay.com/photos/flowers-meadow-sunlight-summer-276014/', 11, '2025-01-17 11:33:16', '2025-01-18 04:08:13'),
+(2, 3, 1, 6, 45, 'posts/jJ1RGTcTH8eoqRmPO6XjGR3hRatrchJq2YDhTprA.png', 'Tempora cumque molli', 'Quae ea aliqua Reic', 'Quae ea aliqua Reic', '<p>Dolor hic laborum la.</p>', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'Vitae autem nesciunt', 'Aut sint esse labo', 'Molestiae in recusan', 'Autem libero aut cum', 'Maxime laboris conse', 'Ad quam nostrud labo', 'Sit commodo quia hic', 'Porro rem dolor blan', 'https://pixabay.com/photos/flowers-meadow-sunlight-summer-276014/', 'https://drive.google.com/file/d/1u_w8GvC4lMznpFlRMP4LMIk3LiZd_TtE/view?usp=sharing', 'posts/cfNHDvQxxWCWi9Vz3eT0Qas9WHnenwhtoaYv5yPm.png', 'Gage Michael', 'Occaecat Nam officii', 'Enim dolores occaeca', 38, '2025-01-17 12:26:18', '2025-01-18 05:43:47'),
+(3, 4, 1, 6, 10, 'posts/x6irQujiT2O6dkXbVbH2FAHuNXqtrNrQey3aNzw0.jpg', 'API reference docs for the React Input component. Learn about the props, CSS, and other APIs of this exported module.', 'api-reference-docs-for-the-react-input-component-learn-about-the-props-css-and-other-apis-of-this-exported-module-', 'API reference docs for the React Input component. Learn about the props, CSS, and other APIs of this exported module.API reference docs for the React Input component.', '<p>​<span style=\"color: rgb(26, 30, 35);font-size: 18px\">API reference docs for the React Input component. Learn about the props, CSS, and other APIs of this exported module.API reference docs for the React Input component. Learn about the props, CSS, and other APIs of this exported module.API reference docs for the React Input component. Learn about the props, CSS, and other APIs of this exported module.API reference docs for the React Input component. Learn about the props, CSS, and other APIs of this exported module.API reference docs for the React Input component. Learn about the props, cvcvcvCSS, and other APIs of this exported module.API reference docs for the React Input component. Learn about the props, CSS, and other APIs of this exported module.API reference docs for the React Input component. Learn about the props, CSS, and other APIs of this exported module.API reference docs for the React Input component. Learn about the props, CSS, and other APIs of this exported module.API reference docs for the React Input component. Learn about the props, CSS, and other APIs of this exported module.</span>​<br></p>', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 'null', 0, '2025-01-27 20:09:21', '2025-01-27 20:19:24');
 
 -- --------------------------------------------------------
 
@@ -434,13 +437,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `settings`

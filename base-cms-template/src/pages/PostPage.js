@@ -310,9 +310,10 @@ export default function PostPage() {
                   onSelectAllClick={handleSelectAllClick}
                 />
                 <TableBody>
-                  {filteredUsers?.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => {
+                  {filteredUsers?.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).reverse().map((row) => {
                     const { id, title,image, views, status} = row;
                     const selectedUser = selected.indexOf(title) !== -1;
+                    const firstTenWords = title.split(" ").slice(0, 7).join(" ");
 
                     return (
                       <TableRow hover key={id} tabIndex={-1} role="checkbox" selected={selectedUser}>
@@ -322,8 +323,8 @@ export default function PostPage() {
                         <TableCell component="th" scope="row" padding="none">
                           <Stack direction="row" alignItems="center" spacing={2}>
                             <Avatar alt={title} src={`${baseUrl}/storage/${image}`} />
-                            <Typography variant="subtitle2" noWrap>
-                              {title}
+                            <Typography variant="subtitle2">
+                              {firstTenWords}
                             </Typography>
                           </Stack>
                         </TableCell>

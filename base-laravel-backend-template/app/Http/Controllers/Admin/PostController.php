@@ -177,7 +177,8 @@ class PostController extends Controller
                 'cat_id' => ['required'],
                 'header_id' => ['required'],
                 'filter_id' => ['required'],
-                'title' => ['required', 'string', 'max:100', 'min:10', 'unique:posts'],
+                'title' => ['required', 'string', 'max:500', 'min:10', 'unique:posts'],
+                'meta_des' => ['required', 'string'],
                 'description' => ['required', 'string', 'min:10'],
                 'image' => ['required'],
             ]);
@@ -444,6 +445,7 @@ class PostController extends Controller
                     'read_time' => $request->read_time,
                     'title' => $request->title,
                     'slug' => $request->slug,
+                    'meta_des' => $request->meta_des,
                     'description' => $request->description,
                     'image' => $filename,
 
@@ -535,7 +537,7 @@ class PostController extends Controller
         try {
             $posts = Post::findOrFail($id);
             $validation = Validator::make($request->all(), [
-                'title' => ['string', 'max:100', 'min:10'],
+                'title' => ['string', 'max:500', 'min:10'],
                 'description' => ['string', 'min:10'],
             ]);
             if ($validation->fails()) {
@@ -800,6 +802,9 @@ class PostController extends Controller
                 }
                 if ($request->slug) {
                     $posts->slug = $request->slug;
+                }
+                if ($request->meta_des) {
+                    $posts->meta_des = $request->meta_des;
                 }
                 if ($request->description) {
                     $posts->description = $request->description;

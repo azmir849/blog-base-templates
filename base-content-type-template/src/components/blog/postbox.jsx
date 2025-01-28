@@ -54,9 +54,7 @@ const Postbox = ({ posts, catPosts, categories }) => {
                       "en-US",
                       options
                     );
-
-                    const croppedDes = post?.description.substring(0,descriptionLimit)
-                    const description = `${croppedDes} <span className='read-more'> ... Read More</span>`
+                    const readMore = `<span className='read-more'> ... Read More</span>`
 
                     return (
                       <div className="row blogcard__wrapper" key={post.id}>
@@ -100,7 +98,7 @@ const Postbox = ({ posts, catPosts, categories }) => {
                               </h3>
                               <div className="postbox__text postbox__description mb-1">
                                 <Link href={`/post/${post?.slug}/${post.id}`}>
-                                  {description && <>{parser(description)}</>}
+                                  {post?.meta_des &&<h6>{post?.meta_des}<span className='read-more'> ... Read More</span></h6> }
                                 </Link>
                               </div>
                               <div className="postbox__meta">

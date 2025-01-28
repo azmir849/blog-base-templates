@@ -228,6 +228,7 @@
     &__title{
         font-size: 22px;
         margin-bottom: 20px;
+        line-height: 1.7;
         @media #{$lg}{
             font-size: 22px;
         }
@@ -286,8 +287,37 @@
     }
     &__description{
         & h6 {
+                font-size: 14px;
+                word-spacing: 2px;
+                line-break: auto;
+                line-height: inherit;
+                color: #6f7172;
+                @media #{$lg}{
+                    font-size: 14px;
+                }
+                @media #{$md}{
+                    font-size: 14px;
+                }
+                @media #{$sm}{
+                    font-size: 12px;
+                }
+                @media #{$xs}{
+                    font-size: 12px;
+                }
             & span{
-                font-size: 14px !important;
+                font-size: 14px;
+                @media #{$lg}{
+                    font-size: 14px;
+                }
+                @media #{$md}{
+                    font-size: 12px;
+                }
+                @media #{$sm}{
+                    font-size: 12px;
+                }
+                @media #{$xs}{
+                    font-size: 12px;
+                }
             }
         }
         .read-more {
@@ -535,9 +565,10 @@
             }
         }
         &-title{
-            margin-bottom: 6px;
-            font-size: 17px;
-            line-height: 1.7;
+                margin-bottom: 6px;
+                font-size: 14px;
+                color: #6f7172;
+                line-height: inherit;
             @media #{$xl,$lg} {
                 font-size: 15px;
             }
